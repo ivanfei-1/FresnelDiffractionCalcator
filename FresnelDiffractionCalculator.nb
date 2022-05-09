@@ -1,0 +1,235 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6877,        225]
+NotebookOptionsPosition[      6513,        210]
+NotebookOutlinePosition[      6923,        227]
+CellTagsIndexPosition[      6880,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{"0.25", "/", "2"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"half", " ", "slit", " ", "width"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", "=", "73.8"}], ";"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "distance", " ", "between", " ", "cylinder", " ", "wave", " ", "source", 
+    " ", "point", " ", "and", " ", "the", " ", "slit", " ", "or", " ", 
+    "straight", " ", "edge"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"s", "=", "180"}], ";"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+   "distance", " ", "between", " ", "the", " ", "slit", " ", "or", " ", 
+    "straight", " ", "edge", " ", "and", " ", "the", " ", "screen"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Lambda]", "=", 
+    RowBox[{"632.8", "*", 
+     RowBox[{"10", "^", 
+      RowBox[{"-", "6"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"cylinder", " ", "wave", " ", "wavelength"}], "*)"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Alpha]", "=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"2", "*", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"1", "/", "r"}], "+", 
+        RowBox[{"1", "/", "s"}]}], ")"}], "/", "\[Lambda]"}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"\[Beta]", "=", 
+   RowBox[{"r", "/", 
+    RowBox[{"(", 
+     RowBox[{"r", "+", "s"}], ")"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"DensityPlot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelS", "[", 
+          RowBox[{"\[Alpha]", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[Beta]", "*", "x"}], "-", "d"}], ")"}]}], "]"}]}], "+", 
+        RowBox[{"FresnelS", "[", 
+         RowBox[{"\[Alpha]", "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[Beta]", "*", "x"}], "+", "d"}], ")"}]}], "]"}]}], 
+       ")"}], "^", "2"}], "+", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelC", "[", 
+          RowBox[{"\[Alpha]", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[Beta]", "*", "x"}], "-", "d"}], ")"}]}], "]"}]}], "+", 
+        RowBox[{"FresnelC", "[", 
+         RowBox[{"\[Alpha]", "*", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[Beta]", "*", "x"}], "+", "d"}], ")"}]}], "]"}]}], 
+       ")"}], "^", "2"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", 
+      RowBox[{"-", "3"}], ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", "0", ",", "20"}], "}"}], ",", 
+    RowBox[{"PlotPoints", "\[Rule]", "100"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"ParametricPlot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "=", "t"}], ",", 
+      RowBox[{"y", "=", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"FresnelS", "[", 
+              RowBox[{"\[Alpha]", "*", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Beta]", "*", "x"}], "-", "d"}], ")"}]}], "]"}]}], 
+            "+", 
+            RowBox[{"FresnelS", "[", 
+             RowBox[{"\[Alpha]", "*", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[Beta]", "*", "x"}], "+", "d"}], ")"}]}], "]"}]}], 
+           ")"}], "^", "2"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"FresnelC", "[", 
+              RowBox[{"\[Alpha]", "*", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Beta]", "*", "x"}], "-", "d"}], ")"}]}], "]"}]}], 
+            "+", 
+            RowBox[{"FresnelC", "[", 
+             RowBox[{"\[Alpha]", "*", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[Beta]", "*", "x"}], "+", "d"}], ")"}]}], "]"}]}], 
+           ")"}], "^", "2"}]}], ")"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "2.4"}], ",", "2"}], "}"}], ",", 
+    RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+    RowBox[{"AspectRatio", "\[Rule]", "0.5"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"ParametricPlot", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "=", "t"}], ",", 
+      RowBox[{"y", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            RowBox[{"FresnelS", "[", 
+             RowBox[{"(", "x", ")"}], "]"}]}], "-", "0.5"}], ")"}], "^", 
+         "2"}], "+", 
+        RowBox[{"0.5", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", 
+             RowBox[{"FresnelC", "[", 
+              RowBox[{"(", "x", ")"}], "]"}]}], "-", "0.5"}], ")"}], "^", 
+          "2"}]}]}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", 
+      RowBox[{"-", "3"}], ",", "5"}], "}"}], ",", 
+    RowBox[{"PlotRange", "\[Rule]", "Full"}]}], "]"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"DensityPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"FresnelS", "[", "x", "]"}]}], "-", "0.5"}], ")"}], "^", 
+     "2"}], "+", 
+    RowBox[{"0.5", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"FresnelC", "[", "x", "]"}]}], "-", "0.5"}], ")"}], "^", 
+      "2"}]}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "3"}], ",", "10"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "0", ",", "3"}], "}"}], ",", 
+   RowBox[{"PlotPoints", "\[Rule]", "100"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.861089945473371*^9, 
+  3.861090198835091*^9}},ExpressionUUID->"eb1717b6-851f-4a28-9eb9-\
+d6d67aa4526f"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{425, Automatic}, {-157, Automatic}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) \
+(2020\:5e747\:670815\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ff520db3-7e8b-40b0-bcac-6d8ed6af98b4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5951, 188, 984, "Input",ExpressionUUID->"eb1717b6-851f-4a28-9eb9-d6d67aa4526f"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
